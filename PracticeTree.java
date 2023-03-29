@@ -24,7 +24,7 @@ public class PracticeTree implements PracticeTreeInterface{
                 NodeList.push(Operand);
             } else {
             // is operator so have to create subtree for operator
-                right = NodeList.pop();   //DUMB COMPUTER
+                right = NodeList.pop();   
                 left = NodeList.pop();
 
                 Tree subTree = new Tree(split[i], left, right);
@@ -34,11 +34,6 @@ public class PracticeTree implements PracticeTreeInterface{
         }
     }
 
-
-    /*public String test = "test";
-    public String test1 = "test1";
-    public String test2 = "test2";
-    public String test3 = "test3";*/
 
 
     public static class Tree{
@@ -64,7 +59,6 @@ public class PracticeTree implements PracticeTreeInterface{
     }
     private static int eval(Tree t){
         String node = t.current;
-        //dumbass recursion computer thing
         //returns eval, but eval is actually passing in Tree of parameter t, so the node becomes t.left and t.right so yes the parse int "node" still works
         //this is actually just the evaluation of the tree to return a whole number
         if(node.equals("+")){
